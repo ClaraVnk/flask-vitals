@@ -8,7 +8,23 @@ license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.14"
 keywords = ["flask", "health", "healthcheck", "readiness", "liveness", "monitoring"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Flask",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: System :: Monitoring",
+    "Typing :: Typed",
+]
 dependencies = ["flask>=3.1.0"]
+
+[project.urls]
+Homepage = "https://github.com/ClaraVnk/flask-vitals"
+Repository = "https://github.com/ClaraVnk/flask-vitals"
+Issues = "https://github.com/ClaraVnk/flask-vitals/issues"
 
 [build-system]
 requires = ["uv_build>=0.11.8,<0.12.0"]
