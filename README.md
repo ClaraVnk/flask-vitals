@@ -4,6 +4,7 @@
 
 **A drop-in Flask health blueprint — `/healthz` (liveness) + `/readyz` (readiness) in two lines.**
 
+[![PyPI](https://img.shields.io/pypi/v/flask-vitals.svg?logo=pypi&logoColor=white)](https://pypi.org/project/flask-vitals/)
 [![CI](https://github.com/ClaraVnk/flask-vitals/actions/workflows/ci.yml/badge.svg)](https://github.com/ClaraVnk/flask-vitals/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.14+](https://img.shields.io/badge/python-3.14+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
@@ -46,9 +47,9 @@ app.register_blueprint(vitals())
 ## 📦 Install
 
 ```bash
-uv add "git+https://github.com/ClaraVnk/flask-vitals"
+pip install flask-vitals
 # or
-pip install "git+https://github.com/ClaraVnk/flask-vitals"
+uv add flask-vitals
 ```
 
 ## 🚀 Quickstart
