@@ -1,12 +1,12 @@
 [project]
 name = "flask-vitals"
-version = "0.1.0"
+version = "0.1.1"
 description = "Drop-in Flask health blueprint: /healthz + /readyz, ready for Huginn / UptimeRobot-style monitoring."
 readme = "README.md"
 authors = [{ name = "Clara Vanacker", email = "claravanacker27@gmail.com" }]
 license = "MIT"
 license-files = ["LICENSE"]
-requires-python = ">=3.14"
+requires-python = ">=3.13"
 keywords = ["flask", "health", "healthcheck", "readiness", "liveness", "monitoring"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -14,6 +14,7 @@ classifiers = [
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",
     "Topic :: Software Development :: Libraries :: Application Frameworks",
     "Topic :: System :: Monitoring",
@@ -39,7 +40,7 @@ dev = [
 
 [tool.ruff]
 line-length = 100
-target-version = "py314"
+target-version = "py313"
 src = ["src", "tests"]
 
 [tool.ruff.lint]
@@ -50,7 +51,7 @@ ignore = ["ANN401"]
 "tests/**" = ["S101", "ANN", "S106"]
 
 [tool.mypy]
-python_version = "3.14"
+python_version = "3.13"
 strict = true
 mypy_path = "src"
 packages = ["flask_vitals"]
