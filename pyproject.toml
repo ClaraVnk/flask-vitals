@@ -1,0 +1,44 @@
+[project]
+name = "flask-vitals"
+version = "0.1.0"
+description = "Drop-in Flask health blueprint: /healthz + /readyz, ready for Huginn / UptimeRobot-style monitoring."
+readme = "README.md"
+authors = [{ name = "Clara Vanacker", email = "claravanacker27@gmail.com" }]
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.14"
+keywords = ["flask", "health", "healthcheck", "readiness", "liveness", "monitoring"]
+dependencies = ["flask>=3.1.0"]
+
+[build-system]
+requires = ["uv_build>=0.11.8,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.1.0",
+    "pytest>=9.1.1",
+    "ruff>=0.15.20",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "S", "RUF", "ANN", "BLE"]
+ignore = ["ANN401"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "ANN", "S106"]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+mypy_path = "src"
+packages = ["flask_vitals"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
